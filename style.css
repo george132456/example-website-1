@@ -1,3 +1,10 @@
+/* ============================================
+   ЭТО ФАЙЛ style.css (CSS)
+   Только стили. Никакого JavaScript здесь быть
+   не должно. Если увидите слово function —
+   вы вставили не тот код.
+   ============================================ */
+
 :root {
     --bg: #121213;
     --text: #ffffff;
@@ -32,23 +39,9 @@ header {
     max-width: 720px;
 }
 
-h1 {
-    font-size: 1.6rem;
-    letter-spacing: 4px;
-    font-weight: 800;
-}
-
-.subtitle {
-    font-size: 0.85rem;
-    color: var(--gray-text);
-    margin-top: 6px;
-}
-
-.attempt-counter {
-    font-size: 0.8rem;
-    color: var(--gray-text);
-    margin-top: 6px;
-}
+h1 { font-size: 1.6rem; letter-spacing: 4px; font-weight: 800; }
+.subtitle { font-size: 0.85rem; color: var(--gray-text); margin-top: 6px; }
+.attempt-counter { font-size: 0.8rem; color: var(--gray-text); margin-top: 6px; }
 
 main {
     flex: 1;
@@ -69,18 +62,8 @@ main {
     padding-bottom: 4px;
 }
 
-.row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 4px 0;
-    min-height: 64px;
-}
-
-.digits {
-    display: flex;
-    gap: 8px;
-}
+.row { display: flex; align-items: center; gap: 16px; padding: 4px 0; min-height: 64px; }
+.digits { display: flex; gap: 8px; }
 
 .tile {
     width: 56px;
@@ -96,15 +79,9 @@ main {
     transition: border-color 0.15s;
 }
 
-.tile.filled {
-    border-color: var(--border-light);
-}
+.tile.filled { border-color: var(--border-light); }
 
-.feedback {
-    display: flex;
-    gap: 8px;
-    margin-left: auto;
-}
+.feedback { display: flex; gap: 8px; margin-left: auto; }
 
 .badge {
     min-width: 76px;
@@ -117,14 +94,9 @@ main {
 }
 
 .badge.bull { background: var(--green); color: #fff; }
-.badge.cow  { background: var(--yellow); color: #fff; }
+.badge.cow { background: var(--yellow); color: #fff; }
 .badge.zero { background: var(--gray); color: var(--gray-text); }
-
-.badge.placeholder {
-    background: transparent;
-    border: 2px dashed #2a2a2b;
-    color: transparent;
-}
+.badge.placeholder { background: transparent; border: 2px dashed #2a2a2b; color: transparent; }
 
 .message {
     min-height: 24px;
@@ -135,22 +107,23 @@ main {
     border-radius: 6px;
 }
 
-.message.win  { background: var(--green); padding: 12px; }
-.message.lose { background: var(--red);   padding: 12px; }
+.message.win { background: var(--green); padding: 12px; }
+.message.lose { background: var(--red); padding: 12px; }
 .message.error { color: #ff6b6b; }
 
-.keyboard {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: auto;
+.js-status {
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    background: #3a3a3c;
+    color: #818384;
+    transition: background 0.3s;
 }
 
-.keypad-row {
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-}
+.keyboard { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
+.keypad-row { display: flex; gap: 6px; justify-content: center; }
 
 .key {
     flex: 1;
@@ -168,10 +141,9 @@ main {
     font-family: inherit;
 }
 
-.key:hover  { background: var(--key-hover); }
+.key:hover { background: var(--key-hover); }
 .key:active { transform: scale(0.95); }
-
-.key.wide  { max-width: 110px; font-size: 0.9rem; }
+.key.wide { max-width: 110px; font-size: 0.9rem; }
 .key.enter { background: var(--green); }
 .key.enter:hover { background: #6ba565; }
 
@@ -182,7 +154,6 @@ footer {
     font-size: 0.75rem;
 }
 
-/* Мобильные */
 @media (max-width: 480px) {
     .tile { width: 44px; height: 44px; font-size: 1.3rem; }
     .badge { min-width: 56px; font-size: 0.8rem; padding: 4px 8px; }
@@ -191,7 +162,6 @@ footer {
     .key { height: 48px; font-size: 1rem; }
 }
 
-/* Большие экраны (PC) */
 @media (min-width: 900px) {
     .tile { width: 64px; height: 64px; font-size: 2rem; }
     .key { height: 62px; font-size: 1.3rem; }

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- ============================================
+     ЭТО ФАЙЛ index.html (HTML)
+     В нём только разметка. Стили — в style.css,
+     логика игры — в script.js.
+     ============================================ -->
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -16,26 +21,27 @@
     <main>
         <div class="board" id="board"></div>
         <div class="message" id="message"></div>
+        <div id="js-status" class="js-status">⚠ JS не загрузился — проверьте Console (F12)</div>
 
         <div class="keyboard" id="keyboard">
             <div class="keypad-row">
-                <button class="key" onclick="handleKey('1')">1</button>
-                <button class="key" onclick="handleKey('2')">2</button>
-                <button class="key" onclick="handleKey('3')">3</button>
-                <button class="key" onclick="handleKey('4')">4</button>
-                <button class="key" onclick="handleKey('5')">5</button>
+                <button class="key" data-key="1">1</button>
+                <button class="key" data-key="2">2</button>
+                <button class="key" data-key="3">3</button>
+                <button class="key" data-key="4">4</button>
+                <button class="key" data-key="5">5</button>
             </div>
             <div class="keypad-row">
-                <button class="key" onclick="handleKey('6')">6</button>
-                <button class="key" onclick="handleKey('7')">7</button>
-                <button class="key" onclick="handleKey('8')">8</button>
-                <button class="key" onclick="handleKey('9')">9</button>
-                <button class="key" onclick="handleKey('0')">0</button>
+                <button class="key" data-key="6">6</button>
+                <button class="key" data-key="7">7</button>
+                <button class="key" data-key="8">8</button>
+                <button class="key" data-key="9">9</button>
+                <button class="key" data-key="0">0</button>
             </div>
             <div class="keypad-row">
-                <button class="key wide" onclick="handleKey('delete')">⌫</button>
-                <button class="key wide enter" onclick="handleKey('enter')">ВВОД</button>
-                <button class="key wide" onclick="handleKey('restart')">↻</button>
+                <button class="key wide" data-key="delete">⌫</button>
+                <button class="key wide enter" data-key="enter">ВВОД</button>
+                <button class="key wide" data-key="restart">↻</button>
             </div>
         </div>
     </main>
@@ -44,6 +50,6 @@
         <p>&copy; 2026 Мой учебный сайт</p>
     </footer>
 
-    <script src="script.js" onerror="alert('ОШИБКА: script.js не загружен!\n\nПроверьте, что файл называется именно script.js (не script.js.txt) и лежит рядом с index.html')"></script>
+    <script src="script.js" onerror="document.getElementById('js-status').textContent='✗ Файл script.js не найден! Проверьте имя файла'; document.getElementById('js-status').style.background='#d64545'; document.getElementById('js-status').style.color='#fff';"></script>
 </body>
 </html>
