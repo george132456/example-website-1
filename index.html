@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
+    <title>Быки и Коровы</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на мой сайт!</h1>
-        <p>Это мой учебный проект, размещённый на GitHub Pages.</p>
+        <h1>БЫКИ И КОРОВЫ</h1>
+        <p class="subtitle">Угадайте 4 цифры без повторов</p>
     </header>
+
     <main>
-        <section>
-            <h2>Обо мне</h2>
-            <p>Здесь я учусь создавать веб-страницы с помощью HTML и CSS.</p>
-        </section>
+        <div class="board" id="board"></div>
+        <div class="message" id="message"></div>
+
+        <div class="keyboard" id="keyboard">
+            <div class="keypad-row">
+                <button class="key" data-key="1">1</button>
+                <button class="key" data-key="2">2</button>
+                <button class="key" data-key="3">3</button>
+                <button class="key" data-key="4">4</button>
+                <button class="key" data-key="5">5</button>
+            </div>
+            <div class="keypad-row">
+                <button class="key" data-key="6">6</button>
+                <button class="key" data-key="7">7</button>
+                <button class="key" data-key="8">8</button>
+                <button class="key" data-key="9">9</button>
+                <button class="key" data-key="0">0</button>
+            </div>
+            <div class="keypad-row">
+                <button class="key wide" data-key="delete">⌫ Стереть</button>
+                <button class="key wide enter" data-key="enter">Ввод</button>
+                <button class="key wide" data-key="restart">↻ Заново</button>
+            </div>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2026 Мой учебный сайт</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
